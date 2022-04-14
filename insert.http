@@ -1,0 +1,8 @@
+POST http://localhost:5000/insert
+Content-Type: application/json
+
+{
+    "id": 485,
+    "no": 777,
+    "email": "shr@bgr.com"
+}

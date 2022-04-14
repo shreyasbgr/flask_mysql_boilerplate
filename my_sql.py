@@ -29,12 +29,16 @@ class mysql_util:
             print(x[0])
 
     def execute_query(self,query):
-        cursor = self.db.cursor()
-        cursor.execute(query)
-        self.db.commit()
-
+        try:
+            cursor = self.db.cursor()
+            cursor.execute(query)
+            self.db.commit()
+        except Exception as e:
+            return(f"Exception raised while executing query {query} : {e}")
+        else:
+            return(f"Query {query} was executed successfully.")
 """
-mysql_util_obj = mysql_util(host='bjnqjjyrdwceenpesae2-mysql.services.clever-cloud.com', user='ulbbyxidrojqjova', password= 'ZH9q5Hd0m9gBPhAZM7hy', database = 'bjnqjjyrdwceenpesae2')
+mysql_util_obj = mysql_util()
 mysql_util_obj.show_databases()
 mysql_util_obj.show_tables()
 mysql_util_obj.execute_query('INSERT INTO testtable VALUES(88,888,"no@no.com")')"""
