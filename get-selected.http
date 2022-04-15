@@ -1,0 +1,11 @@
+POST http://localhost:5000/get-selected
+Content-Type: application/json
+
+{
+    "table_name": "testtable",
+    "where":
+    {
+        "id": "485",
+        "email": "shrbgr@gmail.com"
+    }
+}

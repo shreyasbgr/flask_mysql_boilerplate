@@ -28,6 +28,15 @@ class mysql_util:
         for x in cursor:
             print(x[0])
 
+    def execute_query_read(self,query):
+        try:
+            cursor = self.db.cursor()
+            cursor.execute(query)
+        except Exception as e:
+            return(f"Exception raised while executing query {query} : {e}")
+        else:
+            return cursor.fetchall()
+
     def execute_query(self,query):
         try:
             cursor = self.db.cursor()

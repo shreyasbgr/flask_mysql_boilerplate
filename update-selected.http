@@ -1,0 +1,15 @@
+POST http://localhost:5000/update-selected
+Content-Type: application/json
+
+{
+    "table_name":"testtable",
+    "update":
+    {
+        "email": "sidkoch@gmail.com",
+        "no": 8888
+    },
+    "where":
+    {
+        "id": 888
+    }
+}

@@ -2,7 +2,11 @@ POST http://localhost:5000/insert
 Content-Type: application/json
 
 {
-    "id": 485,
-    "no": 777,
-    "email": "shr@bgr.com"
+    "table_name": "testtable",
+    "record":
+    {
+        "id": 888,
+        "no": 888,
+        "email": "sid@koch.com"
+    }
 }

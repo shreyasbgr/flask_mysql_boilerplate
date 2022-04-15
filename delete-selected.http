@@ -1,0 +1,11 @@
+POST http://localhost:5000/delete-selected
+Content-Type: application/json
+
+{
+    "table_name": "testtable",
+    "where":
+    {
+        "id": 3,
+        "no": 99
+    }
+}
